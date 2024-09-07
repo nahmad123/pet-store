@@ -36,45 +36,14 @@ public class PetStore {
 		@ManyToMany(cascade = CascadeType.PERSIST)
 		@JoinTable(name = "pet_store_customer", joinColumns = @JoinColumn(name = "pet_store_id"), inverseJoinColumns = @JoinColumn(name = "customer_id"))
 		private Set<Customer> customers = new HashSet<>();
-		@OneToMany(mappedBy = "petStore", cascade = CascadeType.ALL, orphanRemoval = true)
 		
+		@EqualsAndHashCode.Exclude
+		@ToString.Exclude
+		@OneToMany(mappedBy = "petStore", cascade = CascadeType.ALL, orphanRemoval = true)
 		private Set<Employee> employee = new HashSet<>();
-		public String getPetStoreName() {
-			return petStoreName;
+		
+		
 		}
-		public void setPetStoreName(String petStoreName) {
-			this.petStoreName = petStoreName;
-		}
-		public String getPetStoreAddress() {
-			return petStoreAddress;
-		}
-		public void setPetStoreAddress(String petStoreAddress) {
-			this.petStoreAddress = petStoreAddress;
-		}
-		public String getPetStoreCity() {
-			return petStoreCity;
-		}
-		public void setPetStoreCity(String petStoreCity) {
-			this.petStoreCity = petStoreCity;
-		}
-		public String getPetStoreState() {
-			return petStoreState;
-		}
-		public void setPetStoreState(String petStoreState) {
-			this.petStoreState = petStoreState;
-		}
-		public String getPetStoreZip() {
-			return petStoreZip;
-		}
-		public void setPetStoreZip(String petStoreZip) {
-			this.petStoreZip = petStoreZip;
-		}
-		public String getPetStorePhone() {
-			return petStorePhone;
-		}
-		public void setPetStorePhone(String petStorePhone) {
-			this.petStorePhone = petStorePhone;
-		}
-		}
+		
 
 

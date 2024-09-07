@@ -13,10 +13,10 @@
 	</parent>
 
 	<groupId>com.promineotech</groupId>
-	<artifactId>pet-parks</artifactId>
+	<artifactId>pet-store</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>pet-parks</name>
-	<description>Pet Park Location project for Spring Book</description>
+	<name>pet-store</name>
+	<description>Pet Store project for Spring Boot</description>
 	<url />
 	<licenses>
 		<license />
