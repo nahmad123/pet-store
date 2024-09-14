@@ -7,3 +7,18 @@
  "petStorePhone": "775-203-2496"
  }
  
+ //create- customer.json
+ {
+ "customerFirstName": "Tony",
+ "customerLastName" : "Parnoodle",
+ "customerEmail": "tony@parnoodle.r.us"
+ }
+ 
+ //create - employee.json
+ {
+ "employeeFirstName": "Samantha",
+ "employeeLastName": "Burns",
+ "employeeEmail": "samantha_burns@ngo.gov",
+ "employeeJobTitle": "Manager"
+ }
+ 
