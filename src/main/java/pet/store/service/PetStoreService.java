@@ -188,5 +188,24 @@ public class PetStoreService {
 		PetStore petStore = findPetStoreById(petStoreId);
 		petStoreDao.delete(petStore);
 	}
+	@Transactional(readOnly = false)
+	public void deleteEmployeeById(Long employeeId ) {
+		Employee employee = findEmployeeById(employeeId);
+		employeeDao.delete(employee);
+	}
+	private Employee findEmployeeById(Long employeeId) {
+		return employeeDao.findById(employeeId)
+				.orElseThrow(() -> new NoSuchElementException("Employee with ID=" + employeeId + " was not found."));
+	}
 	
+	@Transactional(readOnly = false)
+	public void deleteCustomerById(Long customerId ) {
+		Customer customer = findCustomerById(customerId);
+		customerDao.delete(customer);	
+}
+
+private Customer findCustomerById(Long customerId) {
+	return customerDao.findById(customerId)
+			.orElseThrow(() -> new NoSuchElementException("Customer with ID=" + customerId + " was not found."));
+}
 }

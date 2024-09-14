@@ -18,6 +18,7 @@
  {
  "employeeFirstName": "Samantha",
  "employeeLastName": "Burns",
+ "employeePhone" : "702-555-6464",
  "employeeEmail": "samantha_burns@ngo.gov",
  "employeeJobTitle": "Manager"
  }
